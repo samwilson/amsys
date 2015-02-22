@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Amsys Documentation</title>
+		<link rel="stylesheet" href="//cdn.jsdelivr.net/foundation/5.0.2/css/foundation.min.css">
+		<script src="//cdn.jsdelivr.net/foundation/5.0.2/js/vendor/custom.modernizr.js"></script> 
+	</head>
+	<body>
+
+		<div class="row">
+			<h1>Amsys Documentation</h1>
+
+			<h2>Tracking changes to data</h2>
+			<p>The database schema is illustrated below.</p>
+			<p><a href="erd.svg"><img src="erd.png" alt="Entity Relationship Diagram" /></a></p>
+			Normal field changed:
+
+			<table style="font-family:monospace">
+				<thead>
+					<tr>
+						<th colspan="4">changesets</th>
+						<th colspan="8">changes</th>
+					</tr>
+					<tr>
+						<th>id</th>
+						<th>user_id</th>
+						<th>date_and_time</th>
+						<th>comment</th>
+						<th>id</th>
+						<th>changeset_id</th>
+						<th>change_type</th>
+						<th>model_name</th>
+						<th>entity_id</th>
+						<th>field_name</th>
+						<th>old_value</th>
+						<th>new_value</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Fixed typo.</td>
+						1   1  field   Book  34  title   Old Title   New Title
+					</tr>
+				</tbody>
+			</table>
+
+		</div>
+
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+		<script src="//cdn.jsdelivr.net/foundation/5.0.2/js/foundation.min.js"></script>
+		<script>$(document).foundation();</script>
+	</body>
+</html>
